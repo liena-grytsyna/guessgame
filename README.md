@@ -1,34 +1,33 @@
 # Memory Game
 
-A lightweight browser-based memory matching game built with vanilla HTML, CSS, and JavaScript. Flip two cards at a time, find every pair of emojis, and enjoy a confetti celebration when you win.
+Simple browser memory matching game built with plain HTML, CSS, and JavaScript. Flip two cards at a time, find their pairs, and clear the board.
 
 ## Features
 
-- 4x4 grid of emoji cards randomized on every refresh.
-- Smooth flip animations with match/preview states handled via CSS classes.
-- Dark mode toggle to rest your eyes during longer play sessions.
-- Optional cheat peek button that briefly reveals every card.
-- Confetti animation powered by [`canvas-confetti`](https://www.npmjs.com/package/canvas-confetti) when all pairs are matched.
+- 4x4 grid of emoji cards shuffled on every load.
+- CSS-based flip animation for open/match states.
+- Dark mode toggle plus a short cheat peek button.
+- Lightweight confetti effect via [`canvas-confetti`](https://www.npmjs.com/package/canvas-confetti) when the board is complete.
 
 ## Getting Started
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/liena-grytsyna/guessgame.git
 cd guessgame
 ```
 
-Open `memory-game.html` in any modern browser. Because everything is static, no build step or server is required. For live reload during development you can use any static file server or the Live Server extension in VS Code.
+Open `memory-game.html` in any modern browser. Everything is static, so no build or server is required (although any static file server works if you prefer one).
 
 ## Project Structure
 
-- `memory-game.html` – root HTML file that links the stylesheet, script, and confetti CDN.
-- `style.css` – layout, flip animation, and dark-mode styling.
-- `script.js` – shuffles emojis, handles card logic, dark-mode switching, cheat peek, and celebration.
+- `memory-game.html` - markup that includes the stylesheet, script, and confetti CDN.
+- `style.css` - layout, card styles, flip animation, and dark-mode tweaks.
+- `script.js` - emoji shuffling, click handling, cheat reveal, and confetti trigger.
 
 ## Development Notes
 
-- Emojis are stored in the `emojis` array (`script.js`) and duplicated to create pairs—replace them with any glyphs you like.
-- Game sizing is tuned for a 4x4 grid; update `.game` in `style.css` if you change the number of cards.
-- Confetti duration and particle settings live near the bottom of `script.js`.
+- Emoji pairs live in the `emojis` array within `script.js`; replace them with any characters you like.
+- `.game` dimensions in `style.css` assume sixteen cards. Adjust width/height if you add more.
+- Confetti duration and particle counts are near the end of `script.js` for quick tuning.
 
-Contributions, tweaks, and high-score bragging rights are welcome!
+Feel free to adapt or extend the game for your needs.
