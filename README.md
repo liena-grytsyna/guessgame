@@ -9,15 +9,6 @@ Simple browser memory matching game built with plain HTML, CSS, and JavaScript. 
 - Dark mode toggle plus a short cheat peek button.
 - Lightweight confetti effect via [`canvas-confetti`](https://www.npmjs.com/package/canvas-confetti) when the board is complete.
 
-## Getting Started
-
-```bash
-git clone https://github.com/liena-grytsyna/guessgame.git
-cd guessgame
-```
-
-Open `index.html` in any modern browser. Everything is static, so no build or server is required (although any static file server works if you prefer one).
-
 ## Project Structure
 
 - `index.html` - markup that includes the stylesheet, script, and confetti CDN.
@@ -29,5 +20,3 @@ Open `index.html` in any modern browser. Everything is static, so no build or se
 - Emoji pairs live in the `emojis` array within `script.js`; replace them with any characters you like.
 - `.game` dimensions in `style.css` assume sixteen cards. Adjust width/height if you add more.
 - Confetti duration and particle counts are near the end of `script.js` for quick tuning.
-
-Feel free to adapt or extend the game for your needs.
