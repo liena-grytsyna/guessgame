@@ -16,11 +16,11 @@ git clone https://github.com/liena-grytsyna/guessgame.git
 cd guessgame
 ```
 
-Open `memory-game.html` in any modern browser. Everything is static, so no build or server is required (although any static file server works if you prefer one).
+Open `index.html` in any modern browser. Everything is static, so no build or server is required (although any static file server works if you prefer one).
 
 ## Project Structure
 
-- `memory-game.html` - markup that includes the stylesheet, script, and confetti CDN.
+- `index.html` - markup that includes the stylesheet, script, and confetti CDN.
 - `style.css` - layout, card styles, flip animation, and dark-mode tweaks.
 - `script.js` - emoji shuffling, click handling, cheat reveal, and confetti trigger.
 
