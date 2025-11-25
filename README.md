@@ -20,3 +20,4 @@ Simple browser memory matching game built with plain HTML, CSS, and JavaScript. 
 - Emoji pairs live in the `emojis` array within `script.js`; replace them with any characters you like.
 - `.game` dimensions in `style.css` assume sixteen cards. Adjust width/height if you add more.
 - Confetti duration and particle counts are near the end of `script.js` for quick tuning.
+ 
