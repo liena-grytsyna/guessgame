@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 24px;
     background: lightblue;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -24,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    width: min(100%, 560px);
     background: lightcoral;
     padding: 40px 60px;
     border-radius: 10px;
@@ -40,9 +42,17 @@ h2 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
-.cheat-button {
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.peek-button {
     background: #fff;
     border: none;
     font-size: 1.5em;
@@ -54,17 +64,16 @@ h2 {
     height: 40px;
 }
 
-.cheat-button:hover {
+.peek-button:hover {
     background: lightblue;
     color: #fff;
 }
 
-.dark-mode .cheat-button:hover {
+.dark-mode .peek-button:hover {
     background: gray;
 }
 
 .toggle-theme {
-    margin-left: auto;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -86,18 +95,20 @@ h2 {
 }
 
 .game {
-    width: 440px;
-    height: 440px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    width: min(100%, 440px);
+    aspect-ratio: 1;
+    perspective: 1000px;
 }
 
 .item {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    aspect-ratio: 1;
     background: white;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,11 +188,18 @@ h2 {
     color: #fff;
 }
 
-.game {
-    width: 440px;
-    height: 440px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    perspective: 1000px;
+@media (max-width: 520px) {
+    .container {
+        gap: 24px;
+        padding: 28px 20px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    .reset {
+        width: 100%;
+        font-size: 1.2em;
+    }
 }
